@@ -1,0 +1,18 @@
+node_modules/
+playwright-report/
+test-results/
+.auth/
+playwright-report-auth/
+test-results-auth/
+
+# Local credentials and generated test evidence
+.env
+.env.*
+!.env.example
+test-data/*
+!test-data/test-cases.json
+!test-data/test-cases.csv
+!test-data/test-steps.md
+!test-data/review-notes.md
+!test-data/photos/
+*.log

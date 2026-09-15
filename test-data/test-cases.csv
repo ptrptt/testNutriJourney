@@ -1,0 +1,157 @@
+"QA / UAT Test Case Template","","","","","","","","","","","","","","","","",""
+"Yellow cells = example row (for reference only, delete before use). Fill in one row per test case. See the 'Instructions' tab for field definitions.","","","","","","","","","","","","","","","","",""
+"Test Case ID","Module / Feature","Test Case Title","Requirement / User Story ID","Test Type","Priority","Severity","Preconditions","Test Data","Test Steps","Expected Result","Actual Result","Status","Environment","Executed By","","Defect ID","Remarks / Comments"
+"TC-001","User Authentication","Verify user can log in with valid credentials","US-101","Functional","High","Major","1. User is registered.
+2. Login page is accessible.","Username: qa_user01
+Password: Passw0rd!","1. Navigate to login page.
+2. Enter valid username and password.
+3. Click 'Login' button.","User is redirected to the dashboard and a welcome message is displayed.","(Fill in after execution)","Not Run","Staging","Jane Doe","","","Example row - delete before use"
+"TC-LINE_001W1-5","LINE Authentication","สมัครสมาชิกด้วย LINE สำเร็จ","US-LINE-001","Functional","High","Critical","ผู้ใช้ยังไม่มีบัญชี NutriJourney และมีบัญชี LINE","LINE Account ที่ใช้งานได้","1. เปิด NutriJourney
+2. กด Login with LINE
+3. ยืนยันบัญชี LINE
+4. อนุญาตการเข้าถึงข้อมูลที่จำเป็น","ระบบสร้างบัญชีสำเร็จและเข้าสู่หน้า Home/Dashboard","ระบบสามารถสมัครสมาชิกด้วย LINE ได้สำเร็จ และนำผู้ใช้เข้าสู่หน้า Home/Dashboard","Pass","Staging","Phattharaphon Tangtaeng","","-","-"
+"TC-LINE_002 W1-5","LINE Authentication","Login ด้วย LINE สำเร็จ","US-LINE-002","Functional","High","Critical","ผู้ใช้มีบัญชี NutriJourney ที่เชื่อมกับ LINE แล้ว","LINE  Accont ที่ลงทะเบียนแล้ว ","1. เปิด NutriJourney
+2. กด Login with LINE
+3. ยืนยันบัญชี LINE","ระบบตรวจสอบตัวตนสำเร็จและเข้าสู่หน้า Home/Dashboard","ระบบสามารถยืนยันตัวตนด้วย LINE ได้สำเร็จ และนำผู้ใช้เข้าสู่หน้า Home/Dashboard","Pass","Staging","Phattharaphon Tangtaeng","","-","-"
+"TC-LINE_003W1-5","LINE Authentication","ยกเลิกการ Login ด้วย LINE","US-LINE-003","Functional","Medium","Major","ผู้ใช้ยังไม่ได้เข้าสู่ระบบ","LINE Accont","1. เปิด NutriJourney
+2. กด Login with LINE
+3. กดยกเลิกการ Login บนหน้า LINE","ระบบไม่เข้าสู่บัญชีและกลับมายังหน้า Login โดยไม่สร้าง Session","ระบบยกเลิกการเข้าสู่ระบบและกลับมายังหน้า Login โดยไม่มีการสร้าง Session","Pass","Staging","Phattharaphon Tangtaeng","","-","-"
+"TC-LINE_004W1-5","LINE Authentication","Login ด้วย LINE ที่ไม่สามารถยืนยันตัวตนได้","US-LINE-004","Functional","High","Major","ผู้ใช้ยังไม่ได้เข้าสู่ระบบ","บัญชี LINE ที่ไม่สามารถ Authentication ได้","1. เปิด NutriJourney
+2. กด Login with LINE
+3. ดำเนินการ Authentication","ระบบไม่อนุญาตให้เข้าสู่ระบบและแสดงข้อความแจ้งเตือนที่เหมาะสม","ระบบไม่อนุญาตให้เข้าสู่ระบบ และแสดงข้อความแจ้งเตือนเมื่อไม่สามารถยืนยันตัวตนได้","Pass","Staging","Phattharaphon Tangtaeng","","-","-"
+"TC-LINE_005W1-5","LINE Authentication","ตรวจสอบ Session หลัง Login ด้วย LINE","US-LINE-005","Functional","High","Major","ผู้ใช้ Login ด้วย LINE สำเร็จแล้ว","บัญชี LINE ที่ Login สำเร็จ","สำเร็จ
+1. Login ด้วย LINE
+2. เข้าสู่หน้า Home
+3. Refresh หน้าเว็บ
+4. ตรวจสอบสถานะ Login","ระบบยังคงสถานะ Login และผู้ใช้สามารถใช้งานระบบต่อได้โดยไม่ต้อง Login ใหม่","หลัง Refresh หน้าเว็บ ระบบยังคงสถานะ Login และผู้ใช้สามารถใช้งานระบบต่อได้โดยไม่ต้อง Login ใหม่","Pass","Staging","Phattharaphon Tangtaeng","","-","-"
+"TC-HP-001W1-6","Health Profile","ตรวจสอบการแสดงหน้า Health Profile","US-Health-001","Functional","High","Major","1. ผู้ใช้ Login ด้วย LINE สำเร็จ 2. ผู้ใช้เข้าสู่ระบบแล้ว","บัญชีผู้ใช้ที่ Login สำเร็จ","1. Login ด้วย LINE 
+2. เข้าสู่หน้า Health Profile
+3. ตรวจสอบข้อมูลและช่องกรอกทั้งหมด","เข้าสู่หน้า Health Profile 3. ตรวจสอบข้อมูลและช่องกรอกทั้งหมด
+ระบบแสดงหน้า Health Profile และช่องกรอกข้อมูลได้ครบถ้วน","ระบบแสดงหน้า Health Profile และช่องกรอกข้อมูลได้ครบถ้วน","Pass","Staging","Phattharaphon Tangtaeng","","-","-"
+"TC-HP-002 W1-6","Health Profile","ตรวจสอบการบันทึกข้อมูล Health Profile ด้วยข้อมูลที่ถูกต้อง","US-Health-002","Functional","High","Major","ผู้ใช้ Login และอยู่หน้า Health Profile","เพศหญิง อายุ 23 ปี ส่วนสูง 165 ซม. น้ำหนัก 70กก. ระดับกิจกรรม ปานกลาง","1. กรอกข้อมูลสุขภาพทุกช่อง
+2. กดปุ่มบันทึก 
+3. ตรวจสอบข้อมูลหลังบันทึก","ระบบบันทึกข้อมูลสำเร็จและแสดงข้อมูลที่ผู้ใช้กรอกไว้อย่างถูกต้อง","ระบบบันทึกข้อมูลสำเร็จและแสดงข้อมูลถูกต้อง","Pass","Staging","Phattharaphon Tangtaeng","","-","-"
+"TC-HP-003 W1-6","Health Profile","ตรวจสอบกรณีกรอกข้อมูลที่จำเป็นไม่ครบ","US-Health-003","Functional","High","Major","ผู้ใช้ Login และอยู่หน้า Health Profile","เว้นช่องส่วนสูงหรือน้ำหนัก","1. กรอกข้อมูลบางส่วน
+2. เว้นช่องข้อมูลที่จำเป็น
+3. กดบันทึก","2. เว้นช่องข้อมูลที่จำเป็น 3. กดบันทึก
+ระบบไม่บันทึกข้อมูลและแจ้งเตือนให้กรอกข้อมูลที่จำเป็นให้ครบ","ระบบแสดงข้อความแจ้งเตือนและไม่บันทึกข้อมูล","Pass","Staging","Phattharaphon Tangtaeng","","-","-"
+"TC-HP-004 W1-6","Health Profile","ตรวจสอบการกรอกข้อมูลสุขภาพที่ไม่ถูกต้อง","US-Health-004","Functional","Medium","Major","ผู้ใช้ Login และอยู่หน้า Health Profile","ส่วนสูง: -165 ซม. หรือ น้ำหนัก: -70 กก.","1. กรอกข้อมูลที่ไม่ถูกต้อง
+2. กดบันทึก
+3. ตรวจสอบข้อความแจ้งเตือน","ระบบไม่ยอมรับค่าที่ไม่ถูกต้องและแจ้งเตือนผู้ใช้","ระบบไม่บันทึกข้อมูลและแสดงข้อความแจ้งเตือน","Pass","Staging","Phattharaphon Tangtaeng","","-","-"
+"TC-HP-005W1-6 ","Health Profile","ตรวจสอบการแสดงข้อมูล Health Profile ที่บันทึกไว้","US-Health-005","Functional","Medium","Major","ผู้ใช้เคยบันทึกข้อมูล Health Profile แล้ว","ข้อมูล Health Profile ที่มีอยู่ในระบบ","1. Login
+2. เปิดหน้า Health Profile 
+3. ตรวจสอบข้อมูลที่แสดง","ระบบแสดงข้อมูลล่าสุดของผู้ใช้ตรงกับข้อมูลที่บันทึกไว้","ระบบแสดงข้อมูล Health Profile ถูกต้อง","Pass","Staging","Phattharaphon Tangtaeng","","-","-"
+"TC-EHP-001W1-6","Edit health information","ตรวจสอบการแก้ไขข้อมูลสุขภาพสำเร็จ","US-EHP-001","Functional","High","Major","ผู้ใช้ Login และมีข้อมูล Health Profile แล้ว","น้ำหนักเดิม 60 กก. → 58 กก.","1. เปิด Health Profile
+2. กดแก้ไข 
+3. เปลี่ยนน้ำหนักเป็น 58 กก. 
+4. กดบันทึก","ระบบบันทึกข้อมูลใหม่สำเร็จและแสดงน้ำหนัก 58 กก.","ระบบบันทึกข้อมูลใหม่และแสดงน้ำหนัก 58 กก. ถูกต้อง","Pass","Staging","Phattharaphon Tangtaeng","","-","-"
+"TC-EHP-002W1-6","Edit health information","ตรวจสอบการแก้ไขข้อมูลหลายรายการพร้อมกัน","US-EHP-002","Functional","High","Major","ผู้ใช้ Login และมีข้อมูล Health Profile แล้ว","","1. เปิด Health Profile 
+2. กดแก้ไข 
+3. เปลี่ยนข้อมูลหลายรายการ 
+4. กดบันทึก","ระบบบันทึกข้อมูลที่แก้ไขทั้งหมดและแสดงค่าล่าสุดถูกต้อง","ระบบบันทึกและแสดงข้อมูลที่แก้ไขทั้งหมดถูกต้อง","Pass","Staging","Phattharaphon Tangtaeng","","-","-"
+"TC-EHP-003W1-6","Edit health information","ตรวจสอบการแก้ไขด้วยข้อมูลไม่ถูกต้อง","US-EHP-003","Functional","High","Major","ผู้ใช้ Login และมีข้อมูล Health Profile แล้ว","น้ำหนัก = -10 กก.","1. เปิด Health Profile 
+2. กดแก้ไข 
+3. กรอกน้ำหนัก -10
+4. กดบันทึก","ระบบไม่บันทึกข้อมูลและแสดงข้อความแจ้งเตือนว่าข้อมูลไม่ถูกต้อง","ระบบไม่บันทึกข้อมูลและแสดงข้อความแจ้งเตือน","Pass","Staging","Phattharaphon Tangtaeng","","-","-"
+"TC-EHP-004W1-6","Edit health information","ตรวจสอบการแก้ไขโดยเว้นข้อมูลที่จำเป็น","US-EHP-004","Functional","Medium","Major","ผู้ใช้ Login และมีข้อมูล Health Profile แล้ว","ลบค่าน้ำหนักออกและปล่อยช่องว่าง","1. เปิด Health Profile 
+2. กดแก้ไข 
+3. ลบข้อมูลในช่องที่จำเป็น 
+4. กดบันทึ","ระบบไม่บันทึกข้อมูลและแสดงข้อความแจ้งเตือนว่าข้อมูลไม่ถูกต้อง","ระบบแจ้งให้กรอกข้อมูลที่จำเป็นและไม่บันทึกข้อมูล","Pass","Staging","Phattharaphon Tangtaeng","","-","-"
+"TC-EHP-005 W1-6","Edit health information","ตรวจสอบข้อมูลหลังแก้ไขและเปิดหน้าใหม่","US-EHP-005","Functional","High","Major","ผู้ใช้ Login และมีข้อมูล Health Profile แล้ว","น้ำหนักล่าสุด 58 กก.","1. แก้ไขข้อมูล 
+2. กดบันทึก 
+3. Refresh หน้าเว็บ
+4. เปิด Health Profile อีกครั้ง","ระบบไม่บันทึกและแจ้งให้กรอกข้อมูลที่จำเป็น","ระบบแสดงข้อมูลล่าสุดหลัง Refresh ถูกต้อง","Pass","Staging","Phattharaphon Tangtaeng","","-","-"
+"TC-IFG-001W1-8","ตั้งค่าเป้าหมาย IF","ตั้งค่าเป้าหมายสำเร็จ ","US-IFG-01","Functional","High","Major","ผู้ใช้ Login สำเร็จ","IF 16:8","1. เข้าหน้าตั้งค่าเป้าหมาย IF 
+2. เลือก 16:8 
+3. กดบันทึก","ระบบอัปเดตเป้าหมายเป็น 18:6 สำเร็จ","-","Not Run","Staging","Phattharaphon Tangtaeng","","",""
+"TC-IFG-002W1-8","ตั้งค่าเป้าหมาย IF","เปลี่ยนเป้าหมาย IF สำเร็จ","US-IFG-02","Functional","High","Major","ผูัใช้มีเป้าหมายเดิม ","IF 16:8 เป็น 20:4","1. เข้าหน้าตั้งค่า 
+2. เปลี่ยนเป็น 18:6 
+3. กดบันทึก","ระบบไม่บันทึกและแจ้งให้ผู้ใช้เลือกรูปแบบ IF","-","Not Run","Staging","Phattharaphon Tangtaeng","","",""
+"TC-IFG-003W1-8","ตั้งค่าเป้าหมาย IF","ไม่เลือกรูปแบบการทำ IF แล้วกดบันทึก","US-IFG-03","Functional","Medium","Major","ผู้ใช้ Login สำเร็จ","ไม่เลือกข้อมูล ","1. เข้าหน้าตั้งค่า IF 
+2. ไม่เลือกรูปแบบ 
+3. กดบันทึก","ระบบไม่บันทึกและแจ้งให้ผู้ใช้เลือกรูปแบบ IF","-","Not Run","Staging","Phattharaphon Tangtaeng","","",""
+"TC-IFG-004W1-8","ตั้งค่าเป้าหมาย IF","ตรวจสอบเป้าหมาย IF หลัง Refresh","US-IFG-04","Functional","Medium","Major","ผู้ใช้ตั้งค่า IF 16:8 สำเร็จแล้ว","IF 16:8","1. Refresh หน้า 
+2. กลับไปตรวจสอบเป้าหมาย IF","ระบบยังแสดงเป้าหมาย IF 16:8 ที่บันทึกไว้","-","Not Run","Staging","Phattharaphon Tangtaeng","","",""
+"TC-IFG-005W1-8","ตั้งค่าเป้าหมาย IF","ยกเลิกการเปลี่ยนเป้าหมาย","US-IFG-05","Functional","Medium","Major","ผู้ใช้มีเป้าหมาย IF 16:8","เปลี่ยนเป็น 18:6 แต่ไม่บันทึก","1. เข้าหน้าตั้งค่า
+2. เลือก 18:6 
+3. กดยกเลิก/ย้อนกลับ","ระบบไม่เปลี่ยนข้อมูล และยังคงเป้าหมายเดิม 16:8","-","Not Run","Staging","Phattharaphon Tangtaeng","","",""
+"TC-IFT-001","IF Tracker","เริ่มการทำ IF สำเร็จ","US-IF-01","Functional","Medium","Major","ผู้ใช้ Login สำเร็จและตั้งค่าเป้าหมาย IF แล้ว","IF 16:8","1. เข้าหน้า IF Tracker 
+2. กดเริ่ม IF","ระบบเริ่มการทำ IF และบันทึกเวลาเริ่มต้นได้ถูกต้อง","-","Not Run","Staging","Phattharaphon Tangtaeng","","",""
+"TC-IFT-002","IF Tracker","หยุดการทำ IF สำเร็จ","US-IF-01","Functional","Medium","Major","ผู้ใช้กำลังทำ IF","ผู้ใช้อยู่ระหว่างการทำ IF อยู่ / มี IF ที่กำลังทำงานอยู่","1. เข้าหน้า IF Tracker
+2. กดหยุด IF 
+3. ยืนยันการหยุด","ระบบหยุดการทำ IF และบันทึกผลการทำ IF ได้ถูกต้อง","-","Not Run","Staging","Phattharaphon Tangtaeng","","",""
+"TC-IFT-003","IF Tracker","ตรวจสอบสถานะ IF ขณะกำลังทำ IF","US-IF-01","Functional","Medium","Major","ผู้ใช้เริ่มทำ IF แล้ว","ผู้ใช้อยู่ระหว่างการทำ IF อยู่ / มี IF ที่กำลังทำงานอยู่","1. เริ่ม IF 
+2. ออกจากหน้า IF Tracker 
+3. กลับเข้าหน้า IF Tracker","ระบบยังคงแสดงสถานะการทำ IF ปัจจุบันอย่างถูกต้อง","-","Not Run","Staging","Phattharaphon Tangtaeng","","",""
+"TC-IFTMR-001","IF Timer","Timer เริ่มทำงานเมื่อเริ่ม IF","US-TIMER-01","Functional","High","Major","ผู้ใช้ Login และตั้งค่าเป้าหมาย IF แล้ว","IF 16:8","1. เข้า IF Tracker 
+2. กดเริ่ม IF 
+3. ตรวจสอบ Timer","Timer เริ่มนับเวลาตามเวลาเริ่ม IF อย่างถูกต้อง","-","Not Run","Staging","Phattharaphon Tangtaeng","","",""
+"TC-IFTMR-002","IF Timer","Timer แสดงเวลาต่อเนื่องหลัง Refresh หน้า","US-TIMER-01","Functional","High","Major","ผู้ใช้กำลังทำ IF","ผู้ใช้อยู่ระหว่างการทำ IF อยู่ / มี IF ที่กำลังทำงานอยู่","1. ตรวจสอบ Timer 
+2. Refresh หน้า 
+3. ตรวจสอบ Timer อีกครั้ง","Timer ยังคงแสดงเวลาต่อเนื่องจากเวลาเริ่มเดิมและไม่เริ่มนับใหม่","-","Not Run","Staging","Phattharaphon Tangtaeng","","",""
+"TC-IFTMR-003","IF Timer","Timer หยุดทำงานเมื่อสิ้นสุด IF","US-TIMER-01","Functional","High","Major","ผู้ใช้กำลังทำ IF","ผู้ใช้อยู่ระหว่างการทำ IF อยู่ / มี IF ที่กำลังทำงานอยู่","1. เข้า IF Tracker 
+2. กดหยุด IF 
+3. ตรวจสอบ Timer","Timer หยุดทำงานและระบบบันทึกระยะเวลาการทำ IF","-","Not Run","Staging","Phattharaphon Tangtaeng","","",""
+"TC-IFCAL-001","IF Calendar","แสดงวันที่ที่มีประวัติการทำ IF","US-CAL-01","Functional","High","Major","ผู้ใช้ Login และมีประวัติการทำ IF","วันที่มีข้อมูล IF","1. เข้าหน้า IF Calendar 
+2. ตรวจสอบวันที่ในปฏิทิน","ระบบแสดงวันที่ที่มีประวัติการทำ IF ได้ถูกต้อง","-","Not Run","Staging","Phattharaphon Tangtaeng","","",""
+"TC-IFCAL-002","IF Calendar","เปลี่ยนเดือนในปฏิทิน IF","US-CAL-01","Functional","Medium","Major","ผู้ใช้ Login สำเร็จ","เดือนก่อนหน้า / เดือนถัดไป","1. เข้า IF Calendar 
+2. กดเปลี่ยนเดือน 
+3. ตรวจสอบข้อมูล","ระบบแสดงเดือนที่เลือกและประวัติ IF ของเดือนนั้นได้ถูกต้อง","-","Not Run","Staging","Phattharaphon Tangtaeng","","",""
+"TC-IFCAL-003","IF Calendar","แสดง Mood & Energy ของวันที่เลือก","US-CAL-01","Functional","Medium","Major","วันที่เลือกมีข้อมูล Mood & Energy","วันที่มี Check-in","1. เข้า IF Calendar  
+3. ตรวจสอบ Mood & Energy","ระบบแสดง Mood & Energy ตรงกับข้อมูลที่ผู้ใช้บันทึกไว้","-","Not Run","Staging","Phattharaphon Tangtaeng","","",""
+"TC-LN-001","LINE Notification","แจ้งเตือนเมื่อครบเวลาอดอาหาร","US-LN-01","Functional","Medium","Major","1. ผู้ใช้เข้าสู่ระบบด้วย LINE แล้ว 2. ผู้ใช้เริ่มทำ IF 3. เชื่อมต่อ LINE สำหรับรับการแจ้งเตือนแล้ว","IF 16:8 และมีเวลาสิ้นสุดช่วงอดอาหาร","1. เริ่มทำ IF 2. รอจนถึงเวลาสิ้นสุดช่วงอดอาหาร 3. ตรวจสอบข้อความใน LINE","ระบบส่ง LINE Notification เมื่อครบเวลาอดอาหาร โดยแจ้งให้ผู้ใช้ทราบว่าสิ้นสุดช่วงอดอาหารแล้ว","-","Not Run","Staging","Phattharaphon Tangtaeng","","",""
+"TC-LN-002","LINE Notification","แจ้งเตือนเมื่อครบเวลารับประทานอาหาร","US-LN-01","Functional","Medium","Major","1. ผู้ใช้เข้าสู่ระบบด้วย LINE แล้ว 2. ผู้ใช้อยู่ในช่วงรับประทานอาหาร 3. เชื่อมต่อ LINE สำหรับรับการแจ้งเตือนแล้ว","IF 16:8 และมีเวลาสิ้นสุดช่วงรับประทานอาหาร","1. ทำ IF จนครบช่วงอดอาหาร 2. เข้าสู่ช่วงรับประทานอาหาร 3. รอจนถึงเวลาสิ้นสุดช่วงรับประทานอาหาร 4. ตรวจสอบ LINE","ระบบส่ง LINE Notification เมื่อครบเวลารับประทานอาหาร โดยแจ้งให้ผู้ใช้ทราบว่าสิ้นสุดช่วงรับประทานอาหารแล้ว","-","Not Run","Staging","Phattharaphon Tangtaeng","","",""
+"TC-LN-003","LINE Notification","แจ้งเตือนให้บันทึกน้ำหนักประจำเดือน","US-LN-02","Functional","Medium","Major","1. ผู้ใช้เข้าสู่ระบบแล้ว 
+2. เชื่อมต่อ LINE แล้ว 
+3. ถึงรอบการบันทึกข้อมูลสุขภาพประจำเดือน","ผู้ใช้ที่ยังไม่ได้บันทึกน้ำหนักในรอบเดือนปัจจุบัน","1. ใช้บัญชีที่ยังไม่ได้บันทึกน้ำหนักประจำเดือน 2. รอถึงรอบการแจ้งเตือน 3. ตรวจสอบ LINE","ระบบส่ง LINE Notification เพื่อแจ้งเตือนให้ผู้ใช้บันทึกน้ำหนักประจำเดือน","-","Not Run","Staging","Phattharaphon Tangtaeng","","",""
+"TC-LN-004","LINE Notification","แจ้งเตือนให้บันทึกสัดส่วนร่างกายประจำเดือน","US-LN-02","Functional","Medium","Major","1. ผู้ใช้เข้าสู่ระบบแล้ว 
+2. เชื่อมต่อ LINE แล้ว
+ 3. ถึงรอบการบันทึกข้อมูลสุขภาพประจำเดือน","ผู้ใช้ที่ยังไม่ได้บันทึกสัดส่วนในรอบเดือนปัจจุบัน","1. ใช้บัญชีที่ยังไม่ได้บันทึกสัดส่วนประจำเดือน 2. รอถึงรอบการแจ้งเตือน 3. ตรวจสอบ LINE","ระบบส่ง LINE Notification เพื่อแจ้งเตือนให้ผู้ใช้บันทึกสัดส่วนร่างกายประจำเดือน","-","Not Run","Staging","Phattharaphon Tangtaeng","","",""
+"TC-LN-005","LINE Notification","ตรวจสอบการแจ้งเตือนซ้ำเมื่อผู้ใช้ยังไม่สิ้นสุดช่วง IF","US-LN-01","Functional","Medium","Major","1. ผู้ใช้เข้าสู่ระบบและเชื่อมต่อ LINE แล้ว 
+2. ถึงเวลาสิ้นสุดช่วง IF
+3. ผู้ใช้ยังไม่ได้ดำเนินการสิ้นสุดช่วงตามระบบ","IF ที่ครบเวลาแล้วแต่ผู้ใช้ยังไม่ได้กดดำเนินการต่อ","1. เริ่มทำ IF 2. รอจนถึงเวลาสิ้นสุดช่วง 3. ไม่ดำเนินการสิ้นสุดช่วง 4. ตรวจสอบการแจ้งเตือนครั้งถัดไป","ระบบส่งการแจ้งเตือนซ้ำตามเงื่อนไขที่กำหนด โดยไม่ส่งถี่หรือซ้ำเกินกว่ารอบที่ระบบกำหนด","-","Not Run","Staging","Phattharaphon Tangtaeng","","",""
+"TC-WGT-001","บันทึกน้ำหนัก"," บันทึกน้ำหนักสำเร็จ","US-WGT-01","Functional","High","Major","1. ผู้ใช้ Login แล้ว 
+2. ยังไม่ได้บันทึกน้ำหนักในเดือนปัจจุบัน","น้ำหนัก 62.5 kg","1. เข้าหน้าบันทึกข้อมูลสุขภาพ 2. กรอกน้ำหนัก 62.5 kg 3. กดบันทึก","ระบบบันทึกน้ำหนัก 62.5 kg พร้อมวันที่ และแสดงข้อมูลที่บันทึกถูกต้อง","-","Not Run","Staging","Phattharaphon Tangtaeng","05/09/2026","",""
+"TC-WGT-002","บันทึกน้ำหนัก","ไม่สามารถบันทึกน้ำหนักเมื่อกรอกข้อมูลไม่ถูกต้อง","US-WGT-02","Functional","High","Major","ผู้ใช้ Login แล้วและสามารถเข้าหน้าบันทึกน้ำหนักได้","น้ำหนัก -5 kg","1. เข้าหน้าบันทึกข้อมูลสุขภาพ 2. กรอกน้ำหนัก -5 kg 3. กดบันทึก","ระบบไม่บันทึกข้อมูลและแจ้งให้ผู้ใช้กรอกน้ำหนักที่ถูกต้อง","-","Not Run","Staging","Phattharaphon Tangtaeng","05/09/2026","",""
+"TC-WGT-003","บันทึกน้ำหนัก","ตรวจสอบการจำกัดการบันทึกน้ำหนักเดือนละ 1 ครั้ง","US-WGT-03","Functional","High","Major","ผู้ใช้ Login แล้วและมีข้อมูลน้ำหนักของเดือนปัจจุบันแล้ว","มีข้อมูลน้ำหนักของเดือนปัจจุบัน","1. เข้าหน้าบันทึกข้อมูลสุขภาพ 2. ตรวจสอบการบันทึกน้ำหนักเพิ่มเติมในเดือนเดียวกัน","ระบบไม่อนุญาตให้เพิ่มข้อมูลน้ำหนักซ้ำเกินเงื่อนไขเดือนละ 1 ครั้ง","-","Not Run","Staging","Phattharaphon Tangtaeng","05/09/2026","",""
+"TC-BM-001","บันทึกสัดส่วนร่างกาย","บันทึกสัดส่วนร่างกายสำเร็จ","US-BM-01","Functional","High","Major","1. ผู้ใช้ Login แล้ว 
+2. ยังไม่ได้บันทึกสัดส่วนในเดือนปัจจุบัน","รอบอก 34, รอบเอว 28, รอบสะโพก 36 นิ้ว","1. เข้าหน้าบันทึกข้อมูลสุขภาพ 2. กรอกข้อมูลสัดส่วน 3. กดบันทึก","ระบบบันทึกสัดส่วนร่างกายพร้อมวันที่ และแสดงข้อมูลที่บันทึกถูกต้อง","-","Not Run","Staging","Phattharaphon Tangtaeng","05/09/2026","",""
+"TC-BM-002","บันทึกสัดส่วนร่างกาย","ไม่สามารถบันทึกสัดส่วนเมื่อกรอกข้อมูลไม่ถูกต้อง","US-BM-02","Functional","High","Major","ผู้ใช้ Login แล้วและสามารถเข้าหน้าบันทึกสัดส่วนได้","รอบเอว -28 นิ้ว",". เข้าหน้าบันทึกข้อมูลสุขภาพ 2. กรอกค่าติดลบ 3. กดบันทึก","ระบบไม่บันทึกข้อมูลและแจ้งให้ผู้ใช้กรอกสัดส่วนร่างกายที่ถูกต้อง","-","Not Run","Staging","Phattharaphon Tangtaeng","05/09/2026","",""
+"TC-BM-003","บันทึกสัดส่วนร่างกาย","ตรวจสอบการจำกัดการบันทึกสัดส่วนเดือนละ 1 ครั้ง","US-BM-03","Functional","High","Major","ผู้ใช้ Login แล้วและมีข้อมูลสัดส่วนของเดือนปัจจุบันแล้ว","มีข้อมูลสัดส่วนของเดือนปัจจุบัน","1. เข้าหน้าบันทึกข้อมูลสุขภาพ 2. ตรวจสอบการบันทึกสัดส่วนเพิ่มเติมในเดือนเดียวกัน","ระบบไม่อนุญาตให้เพิ่มข้อมูลสัดส่วนซ้ำเกินเงื่อนไขเดือนละ 1 ครั้ง","-","Not Run","Staging","Phattharaphon Tangtaeng","05/09/2026","",""
+"TC-GRAPH-001","กราฟติดตามน้ำหนักรายปี","แสดงกราฟน้ำหนักรายปีสำเร็จ","US-GRAPH-01","Functional","High","Major","ผู้ใช้ Login แล้วและมีข้อมูลน้ำหนักที่บันทึกไว้","ข้อมูลน้ำหนักหลายเดือนในปีเดียวกัน","1. เข้าหน้า Health Statistics 2. เปิดส่วนกราฟน้ำหนัก 3. ตรวจสอบกราฟ","ระบบแสดงกราฟน้ำหนักรายปีและแสดงข้อมูลน้ำหนักที่มีอยู่ถูกต้อง","-","Not Run","Staging","Phattharaphon Tangtaeng","05/09/2026","",""
+"TC-GRAPH-002","กราฟติดตามน้ำหนักรายปี","แสดงข้อมูลน้ำหนักตรงตามเดือนที่บันทึก","US-GRAPH-01","Functional","High","Major","มีข้อมูลน้ำหนักในหลายเดือน","ม.ค. 65 kg, ก.พ. 64 kg, มี.ค. 63 kg","1. เปิดกราฟน้ำหนักรายปี 2. ตรวจสอบข้อมูลของแต่ละเดือน 3. เปรียบเทียบกับข้อมูลที่บันทึก","กราฟแสดงค่าน้ำหนักในแต่ละเดือนตรงกับข้อมูลที่ผู้ใช้บันทึก","-","Not Run","Staging","Phattharaphon Tangtaeng","05/09/2026","",""
+"TC-GRAPH-003","กราฟติดตามน้ำหนักรายปี","แสดงผลเมื่อไม่มีข้อมูลน้ำหนัก","US-GRAPH-01","Functional","High","Major","ผู้ใช้ Login แล้วแต่ไม่มีข้อมูลน้ำหนักสำหรับแสดงในกราฟ","ไม่มีข้อมูลน้ำหนัก","1. เข้า Health Statistics 2. เปิดกราฟน้ำหนัก","ระบบแสดงสถานะไม่มีข้อมูลอย่างเหมาะสมและหน้าเว็บไม่เกิด Error","-","Not Run","Staging","Phattharaphon Tangtaeng","05/09/2026","",""
+"TC-HS-001","Health Statistics","แสดงข้อมูลสถิติสุขภาพสำเร็จ","US-HS-01","Functional","High","Major","ผู้ใช้ Login แล้วและมีข้อมูลสุขภาพที่บันทึกไว้","ข้อมูลน้ำหนักและข้อมูลสุขภาพของผู้ใช้","1. เข้า Health Statistics 2. ตรวจสอบข้อมูลสถิติที่แสดง","ระบบแสดงข้อมูลสถิติสุขภาพจากข้อมูลของผู้ใช้ได้ถูกต้อง","-","Not Run","Staging","Phattharaphon Tangtaeng","05/09/2026","",""
+"TC-HS-002","Health Statistics","แสดงข้อมูลสุขภาพล่าสุดตรงกับข้อมูลที่บันทึก","US-HS-01","Functional","High","Major","ผู้ใช้มีข้อมูลสุขภาพที่บันทึกไว้","น้ำหนักล่าสุด 62.5 kg","1. บันทึกข้อมูลสุขภาพ 2. เข้า Health Statistics 3. ตรวจสอบข้อมูลล่าสุด","ระบบแสดงข้อมูลสุขภาพล่าสุดตรงกับข้อมูลที่ผู้ใช้บันทึกไว้","-","Not Run","Staging","Phattharaphon Tangtaeng","05/09/2026","",""
+"TC-HS-003","Health Statistics","แสดงผลเมื่อยังไม่มีข้อมูลสุขภาพ","US-HS-01","Functional","High","Major","ผู้ใช้ Login แล้วแต่ยังไม่มีข้อมูลสุขภาพสำหรับแสดงสถิติ","ไม่มีข้อมูลสุขภาพ","1. เข้า Health Statistics 2. ตรวจสอบหน้าสถิติ","ระบบแสดงสถานะไม่มีข้อมูลอย่างเหมาะสมและสามารถใช้งานหน้าเว็บต่อได้โดยไม่เกิด Error","-","Not Run","Staging","Phattharaphon Tangtaeng","05/09/2026","",""
+"TC-PP-001","Progress Photo","บันทึก Progress Photo สำเร็จ","US-PP-01","Functional","High","Major","1. ผู้ใช้ Login แล้ว 2. สามารถเข้าหน้า Progress Photo ได้","รูปด้านหน้า ด้านข้าง และด้านหลัง","1. เข้า Progress Photo 2. เลือกรูปด้านหน้า/ข้าง/หลัง 3. ตรวจสอบ Preview 4. กดบันทึก","ะบบบันทึกรูป Progress Photo พร้อมวันที่และข้อมูลที่เกี่ยวข้องได้สำเร็จ","-","Not Run","Staging","Phattharaphon Tangtaeng","05/09/2026","",""
+"TC-PP-002","Progress Photo","ไม่สามารถบันทึกเมื่อรูปไม่ครบตามที่กำหนด","US-PP-01","Functional","High","Major","ผู้ใช้ Login และอยู่หน้า Progress Photo","เลือกเฉพาะรูปด้านหน้า","1. เลือกรูปไม่ครบ 3 มุม 2. กดบันทึก","ระบบไม่บันทึกและแจ้งให้ผู้ใช้อัปโหลดรูปให้ครบตามเงื่อนไข","-","Not Run","Staging","Phattharaphon Tangtaeng","05/09/2026","",""
+"TC-PP-003","Progress Photo","ไม่อนุญาตไฟล์รูปภาพที่ไม่รองรับ","US-PP-01","Functional","High","Major","ผู้ใช้ Login และอยู่หน้า Progress Photo","ไฟล์ PDF หรือไฟล์ที่ไม่ใช่รูปภาพ","1. เลือกไฟล์ที่ไม่รองรับ 2. กดอัปโหลด","ระบบไม่รับไฟล์และแสดงข้อความแจ้งชนิดไฟล์ที่รองรับ","-","Not Run","Staging","Phattharaphon Tangtaeng","05/09/2026","",""
+"TC-PPTL-001","Progress Photo Timeline","แสดงรูป Progress ย้อนหลังตามลำดับเวลา","US-PPTL-01","Functional","High","Major","ผู้ใช้มี Progress Photo มากกว่า 1 ช่วงเวลา","Progress Photo หลายเดือน","หลายเดือน
+1. เข้า Progress Photo Timeline 2. ตรวจสอบรายการรูป","ระบบแสดง Progress Photo ย้อนหลังเรียงตามวันที่หรือเดือนอย่างถูกต้อง","-","Not Run","Staging","Phattharaphon Tangtaeng","10/09/2026","",""
+"TC-PPTL-002","Progress Photo Timeline","เปิดดูรายละเอียด Progress Photo จาก Timeline","US-PPTL-01","Functional","High","Major","มี Progress Photo อยู่ใน Timeline","เลือก Progress Photo 1 รายการ","1 รายการ
+1. เข้า Timeline 2. เลือกรายการรูป","ระบบแสดงรายละเอียดรูป วันที่ และข้อมูลสุขภาพที่เกี่ยวข้องของรายการที่เลือก","-","Not Run","Staging","Phattharaphon Tangtaeng","10/09/2026","",""
+"TC-PPTL-003","Progress Photo Timeline","แสดงผลเมื่อยังไม่มี Progress Photo","US-PPTL-01","Functional","High","Major","ผู้ใช้ Login แต่ยังไม่เคยบันทึก Progress Photo","ไม่มีข้อมูลรูป","1. เข้า Progress Photo Timeline","ระบบแสดงสถานะว่ายังไม่มี Progress Photo และหน้าเว็บไม่เกิด Error","-","Not Run","Staging","Phattharaphon Tangtaeng","10/09/2026","",""
+"TC-BA-001","Before / After Comparison","เปรียบเทียบ Progress Photo สองช่วงเวลาสำเร็จ","US-BA-01","Functional","High","Major","ผู้ใช้มี Progress Photo อย่างน้อย 2 ช่วงเวลา","รูปเดือนมกราคม และเดือนมิถุนายน","1. เข้า Before / After 2. เลือกรูปช่วงเวลาแรก 3. เลือกรูปช่วงเวลาที่สอง 4. กดเปรียบเทียบ","ระบบแสดงรูป Before และ After ของสองช่วงเวลาที่เลือกเพื่อให้ผู้ใช้เปรียบเทียบได้","-","Not Run","Staging","Phattharaphon Tangtaeng","10/09/2026","",""
+"TC-BA-002","Before / After Comparison","ไม่สามารถเปรียบเทียบเมื่อเลือกข้อมูลไม่ครบ 2 ช่วงเวลา","US-BA-01","Functional","High","Major","ผู้ใช้มี Progress Photo อย่างน้อย 1 ชุด","เลือกรูปเพียง 1 ช่วงเวลา","1. เข้า Before / After 2. เลือกรูปเพียง 1 ช่วงเวลา 3. กดเปรียบเทียบ","ระบบไม่ทำการเปรียบเทียบและแจ้งให้เลือกข้อมูลให้ครบ 2 ช่วงเวลา","-","Not Run","Staging","Phattharaphon Tangtaeng","10/09/2026","",""
+"TC-BA-003","Before / After Comparison","แสดงข้อมูลน้ำหนักและสัดส่วนของสองช่วงเวลาถูกต้อง","US-BA-01","Functional","High","Major","Progress Photo ทั้งสองช่วงมีข้อมูลสุขภาพประกอบ","ก่อน: 65 kg, เอว 30 / หลัง: 62 kg, เอว 28","1. เลือก Progress Photo 2 ช่วงเวลา 2. กดเปรียบเทียบ 3. ตรวจสอบข้อมูลน้ำหนักและสัดส่วน","ระบบแสดงข้อมูลน้ำหนักและสัดส่วนของแต่ละช่วงเวลาตรงกับข้อมูลที่บันทึกไว้","-","Not Run","Staging","Phattharaphon Tangtaeng","10/09/2026","",""
+"TC-MOOD-001","Mood Check-in","บันทึก Mood สำเร็จ","US-MOOD-01","Functional","High","Major","1. ผู้ใช้ Login แล้ว 2. ผู้ใช้มี IF Session","Mood = Happy","1. เข้า IF Tracker 2. ทำ IF ตาม Flow 3. เลือก Mood 4. กดบันทึก","ระบบบันทึก Mood ของผู้ใช้ได้สำเร็จและแสดงข้อมูลถูกต้อง","-","Not Run","Staging","Phattharaphon Tangtaeng","10/09/2026","",""
+"TC-MOOD-002","Mood Check-in","ตรวจสอบการบันทึกเมื่อไม่ได้เลือก Mood","US-MOOD-01","Functional","Medium","Major","ผู้ใช้ Login และอยู่ในขั้นตอน Mood Check-in","ไม่เลือก Mood","1. เข้าหน้า Mood Check-in 2. ไม่เลือก Mood 3. พยายามดำเนินการต่อ","ระบบไม่ควรบันทึก Mood ที่ไม่มีค่า และจัดการข้อมูลได้อย่างถูกต้อง","-","Not Run","Staging","Phattharaphon Tangtaeng","10/09/2026","",""
+"TC-MOOD-003","Mood Check-in","ตรวจสอบการแสดง Mood ที่บันทึกไว้","US-MOOD-01","Functional","Medium","Major","ผู้ใช้เคยบันทึก Mood แล้ว","Mood = Happy","1. บันทึก Mood 2. เปิดดูข้อมูลที่บันทึก 3. ตรวจสอบ Mood","Mood ที่แสดงต้องตรงกับ Mood ที่ผู้ใช้บันทึก","-","Not Run","Staging","Phattharaphon Tangtaeng","10/09/2026","",""
+"TC-CAL-001","IF Calendar - Mood","แสดง Mood ในประวัติ IF ถูกต้อง","US-CAL-02","Functional","Medium","Major","ผู้ใช้ Login และมีประวัติ IF ที่บันทึก Mood","วันที่มี IF + Mood = Happy","1. บันทึก Mood ใน IF Session 2. เปิดหน้าประวัติ/Calendar 3. เลือกวันที่บันทึก 4. ตรวจสอบ Mood","ะบบแสดง Mood ของวันที่เลือกตรงกับข้อมูลที่บันทึก","-","Not Run","Staging","Phattharaphon Tangtaeng","10/09/2026","",""
+"TC-HJ-001","Healthy Journey","แสดงข้อมูล Healthy Journey สำเร็จ","US-HJ-01","Functional","High","Major","ผู้ใช้ Login แล้ว","User ที่มีข้อมูล XP และ Character","1. Login 2. เข้า Healthy Journey / My Egg 3. ตรวจสอบข้อมูล","ระบบแสดงตัวละคร Level และความคืบหน้าของผู้ใช้ได้ถูกต้อง","-","Not Run","Staging","Phattharaphon Tangtaeng","10/09/2026","",""
+"TC-HJ-002","Healthy Journey","แสดงความคืบหน้าของตัวละครตามข้อมูลผู้ใช้","US-HJ-02","Functional","Medium","Major","ผู้ใช้มี XP สะสม","XP ตามบัญชีผู้ใช้","1. เข้า Healthy Journey 2. ตรวจสอบ XP 3. ตรวจสอบ Level และตัวละคร","ระบบแสดง XP, Level และตัวละครสัมพันธ์กับความคืบหน้าของผู้ใช้","-","Not Run","Staging","Phattharaphon Tangtaeng","10/09/2026","",""
+"TC-XP-001","XP System","เพิ่ม XP เมื่อทำ Daily Mission สำเร็จ","US-XP-01","Functional","High","Major","ผู้ใช้ Login และมี Daily Mission ที่ยังไม่สำเร็จ","Mission ที่ได้รับ XP","1. ตรวจสอบ XP ก่อนทำ Mission 2. ทำ Mission ให้สำเร็จ 3. ตรวจสอบ XP หลังทำ Mission","ระบบเพิ่ม XP ให้ผู้ใช้เมื่อ Mission สำเร็จตามค่าที่กำหนด","-","Not Run","Staging","Phattharaphon Tangtaeng","10/09/2026","",""
+"TC-XP-002","XP System","XP ไม่เพิ่มซ้ำจาก Mission เดิม","US-XP-01","Functional","High","Major","ผู้ใช้ทำ Mission สำเร็จและได้รับ XP แล้ว","Mission เดิมที่ Completed","1. ทำ Mission สำเร็จ 2. ตรวจสอบ XP 3. Refresh หน้า 4. ตรวจสอบ XP อีกครั้ง","ระบบต้องไม่เพิ่ม XP ซ้ำจาก Mission เดิมในรอบเดียวกัน","-","Not Run","Staging","Phattharaphon Tangtaeng","10/09/2026","",""
+"TC-XP-003","XP System","แสดง XP สะสมถูกต้อง","US-XP-01","Functional","Medium","Major","ผู้ใช้มี XP สะสม","XP ก่อนและหลังทำ Mission","1. ตรวจสอบ XP เริ่มต้น 2. ทำ Mission สำเร็จ 3. เปิด Healthy Journey 4. ตรวจสอบ XP","XP สะสมที่แสดงตรงกับ XP ที่ผู้ใช้ได้รับทั้งหมด","-","Not Run","Staging","Phattharaphon Tangtaeng","10/09/2026","",""
+"TC-CHAR-001","Character Level","แสดง Character Level ตาม XP","US-CHAR-01","Functional","High","Major","ผู้ใช้ Login และมี XP","XP ตามเกณฑ์ Level","1. เข้า Healthy Journey 2. ตรวจสอบ XP 3. ตรวจสอบ Character Level","ระบบแสดง Character Level ตรงตามเกณฑ์ XP","-","Not Run","Staging","Phattharaphon Tangtaeng","10/09/2026","",""
+"TC-CHAR-002","Character Level","Level เพิ่มเมื่อ XP ถึงเกณฑ์","US-CHAR-01","Functional","High","Major","XP ของผู้ใช้ใกล้ถึงเกณฑ์ Level ถัดไป","XP ที่ทำให้ถึง Level ถัดไป","1. ตรวจสอบ Level ปัจจุบัน 2. ทำ Mission เพื่อรับ XP 3. ตรวจสอบ Level หลังได้รับ XP","เมื่อ XP ถึงเกณฑ์ ระบบเพิ่ม Level และแสดงตัวละครของ Level ใหม่ถูกต้อง","-","Not Run","Staging","Phattharaphon Tangtaeng","10/09/2026","",""
+"TC-CHAR-004","Character Level","ตรวจสอบ Character Level ตั้งแต่ Level","US-CHAR-01","Functional","Medium","Major","มีข้อมูลทดสอบ XP สำหรับแต่ละ Level","XP ตามเกณฑ์ Level 0–9","1. กำหนด XP ตามแต่ละ Level 2. เปิด Healthy Journey 3. ตรวจสอบ Level และตัวละคร","ระบบแสดง Level และตัวละครถูกต้องตามเกณฑ์ตั้งแต่ Level 0 ถึง Level 9","-","Not Run","Staging","Phattharaphon Tangtaeng","10/09/2026","",""
+"TC-DM-001","Daily Mission","แสดงรายการ Daily Mission สำเร็จ","US-DM-01","Functional","High","Major","ผู้ใช้ Login แล้ว","บัญชีผู้ใช้ที่มี Daily Mission","1. Login 2. เข้า Healthy Journey / My Egg 3. ตรวจสอบรายการ Daily Mission","ระบบแสดงรายการ Daily Mission ของผู้ใช้ได้ถูกต้องและครบถ้วน","-","Not Run","Staging","Phattharaphon Tangtaeng","10/09/2026","",""
+"TC-DM-002","Daily Mission","อัปเดตสถานะ Mission เมื่อทำภารกิจสำเร็จ","US-DM-01","Functional","High","Major","ผู้ใช้ Login และมี Mission ที่ยังไม่สำเร็จ","Mission = เริ่ม IF","1. เปิด Daily Mission 2. ตรวจสอบสถานะก่อนทำ 3. เริ่ม IF 4. กลับมาตรวจสอบ Mission","ระบบเปลี่ยนสถานะ Mission ที่ทำสำเร็จเป็น Completed","-","Not Run","Staging","Phattharaphon Tangtaeng","10/09/2026","",""
+"TC-DM-003","Daily Mission","Mission ที่ยังไม่ผ่านเงื่อนไขต้องไม่แสดงว่าสำเร็จ","US-DM-01","Functional","Medium","Major","ผู้ใช้ Login และมี Mission ที่ยังไม่สำเร็จ","Mission ที่ยังไม่ได้ทำ","1. เปิด Daily Mission 2. ไม่ทำตามเงื่อนไข Mission 3. ตรวจสอบสถานะ","ระบบยังแสดง Mission เป็นยังไม่สำเร็จ","-","Not Run","Staging","Phattharaphon Tangtaeng","10/09/2026","",""
+"TC-DM-004","Daily Mission","รีเซ็ต Daily Mission เมื่อเข้าสู่รอบใหม่","US-DM-01","Functional","High","Major","ผู้ใช้ทำ Mission ของรอบปัจจุบันแล้ว","Mission = Completed","1. ทำ Mission สำเร็จ 2. ตรวจสอบสถานะ 3. เข้าสู่รอบ Mission ใหม่ 4. ตรวจสอบอีกครั้ง","ระบบรีเซ็ต Daily Mission และสามารถทำ Mission ของรอบใหม่ได้","-","Not Run","Staging","Phattharaphon Tangtaeng","10/09/2026","",""
+"TC-NAME-001","Character Name","ตั้งชื่อตัวละครสำเร็จ","US-DM-01","Functional","Medium","Major","ผู้ใช้ Login และเข้า Healthy Journey ได้","ชื่อ = น้องม่อน","1. เข้า Healthy Journey 2. เลือกตั้งชื่อตัวละคร 3. กรอกชื่อ 4. กดบันทึก","ระบบบันทึกและแสดงชื่อตัวละครถูกต้อง","-","Not Run","Staging","Phattharaphon Tangtaeng","10/09/2026","",""
+"TC-NAME-002","Character Name","แก้ไขชื่อตัวละครสำเร็จ","US-DM-01","Functional","Medium","Major","ผู้ใช้มีชื่อตัวละครเดิม","เดิม = น้องม่อน
+ใหม่ = น้องไข่","1. เข้า Healthy Journey 2. เลือกแก้ไขชื่อ 3. กรอกชื่อใหม่ 4. กดบันทึก","ระบบบันทึกและแสดงชื่อตัวละครใหม่ถูกต้อง","-","Not Run","Staging","Phattharaphon Tangtaeng","10/09/2026","",""
+"TC-NAME-003","Character Name","ชื่อตัวละครยังคงอยู่หลัง Refresh","US-DM-01","Functional","Medium","Major","ผู้ใช้ตั้งชื่อตัวละครเรียบร้อยแล้ว","ชื่อ = น้องไข่","1. บันทึกชื่อตัวละคร 2. Refresh หน้า 3. เข้า Healthy Journey อีกครั้ง 4. ตรวจสอบชื่อ","ระบบยังแสดงชื่อตัวละครที่บันทึกไว้ถูกต้อง","-","Not Run","Staging","Phattharaphon Tangtaeng","10/09/2026","",""

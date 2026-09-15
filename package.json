@@ -1,0 +1,6 @@
+{
+  "name": "nutrijourney-e2e",
+  "private": true,
+  "scripts": { "test": "playwright test", "test:auth": "playwright test -c playwright.auth.config.js", "login": "node scripts/login.js", "report": "playwright show-report", "report:auth": "playwright show-report playwright-report-auth", "coverage": "node scripts/report-sheet.js" },
+  "devDependencies": { "@playwright/test": "^1.58.0" }
+}
